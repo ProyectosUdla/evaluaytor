@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EvaluacionApplication",
+            "request": "launch",
+            "mainClass": "com.udla.evaluaytor.businessdomain.evaluacion.EvaluacionApplication",
+            "projectName": "evaluacion"
+        },
+        {
+            "type": "java",
             "name": "EmpresaApplication",
             "request": "launch",
             "mainClass": "com.udla.evaluaytor.businessdomain.empresa.EmpresaApplication",

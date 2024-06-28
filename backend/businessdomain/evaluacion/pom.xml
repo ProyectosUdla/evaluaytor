@@ -10,7 +10,7 @@
 
 	<groupId>com.udla.evaluaytor.businessdomain</groupId>
 	<artifactId>evaluacion</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>evaluacion</name>
 	<description>Gestion de Evaluacion de Proveedores</description>
 	

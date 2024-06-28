@@ -5,13 +5,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.udla.evaluaytor.businessdomain.empresa.dto.ProveedorDTO;
+import com.udla.evaluaytor.businessdomain.empresa.models.Perito;
 import com.udla.evaluaytor.businessdomain.empresa.dto.ProveedorResponseDTO;
 import com.udla.evaluaytor.businessdomain.empresa.repositories.CategoriaRepository;
 import com.udla.evaluaytor.businessdomain.empresa.repositories.EmpresaRepository;
+import com.udla.evaluaytor.businessdomain.empresa.repositories.PeritoRepository;
 import com.udla.evaluaytor.businessdomain.empresa.repositories.ProveedorRepository;
 import com.udla.evaluaytor.businessdomain.empresa.services.ProveedorService;
 
 import java.util.List;
+import java.util.Optional;
 
 
 
@@ -25,11 +28,17 @@ public class EmpresaController {
     @Autowired
     ProveedorRepository proveedorRepository;
 
+    @Autowired
+    PeritoRepository peritoRepository;
+
     @Autowired 
     CategoriaRepository categoriaRepository;
 
     @Autowired
     private ProveedorService proveedorService;
+
+
+
 
   /* 
     // Listar todo
@@ -105,4 +114,12 @@ public class EmpresaController {
         ProveedorResponseDTO proveedor = proveedorService.getProveedorById(id);
         return ResponseEntity.ok(proveedor);
     }
+
+    @GetMapping("perito/findbyid/{id}")
+    public ResponseEntity<Perito> getPeritoById(@PathVariable Long id) {
+        Optional<Perito> peritoOptional = peritoRepository.findById(id);
+        return peritoOptional.map(perito -> new ResponseEntity<>(perito, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
 }
+

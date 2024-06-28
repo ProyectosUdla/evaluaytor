@@ -29,6 +29,9 @@ public class FormularioEvaluacion {
     @Transient
     private Proveedor proveedor;
 
+    @Transient
+    private Perito Perito;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "estado_id", nullable = false)
     @JsonBackReference

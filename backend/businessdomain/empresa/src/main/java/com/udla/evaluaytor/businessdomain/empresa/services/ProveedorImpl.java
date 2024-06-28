@@ -87,6 +87,7 @@ public class ProveedorImpl implements ProveedorService {
         dto.setId(proveedor.getId());
         dto.setNombre(proveedor.getNombre());
         dto.setDireccion(proveedor.getDireccion());
+        dto.setTelefono(proveedor.getTelefono());
 
         Set<CategoriaDTO> categoriasDTO = proveedor.getCategorias().stream()
                 .map(categoria -> {

@@ -21,7 +21,4 @@ public class EstadoFormulario {
     @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @OneToMany(mappedBy = "estadoFormulario", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
-    private List<FormularioEvaluacion> formularios;
 }

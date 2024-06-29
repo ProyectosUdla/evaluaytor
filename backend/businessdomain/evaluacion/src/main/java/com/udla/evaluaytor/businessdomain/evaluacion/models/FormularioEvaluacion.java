@@ -23,9 +23,8 @@ public class FormularioEvaluacion {
     private LocalDate fecha;
     private Integer evaluacion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "estado_formulario_id", nullable = false)
-    @JsonBackReference
     private EstadoFormulario estadoFormulario;
 
     private Long proveedor_id;

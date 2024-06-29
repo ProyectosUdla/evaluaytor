@@ -24,6 +24,9 @@ public class FormularioEvaluacionImp implements FormularioEvaluacionService {
         FormularioEvaluacion formularioEvaluacion = formularioEvaluacionRepository.findById(formularioId)
             .orElseThrow(() -> new RuntimeException("Formulario no encontrado"));
 
+        // Cargar el estadoFormulario
+        formularioEvaluacion.getEstadoFormulario().getNombre();
+
         // Obtén los IDs de Proveedor y Perito desde el formulario
         Long proveedorId = formularioEvaluacion.getProveedor_id();
         Long categoriaId = formularioEvaluacion.getCategoria_id();

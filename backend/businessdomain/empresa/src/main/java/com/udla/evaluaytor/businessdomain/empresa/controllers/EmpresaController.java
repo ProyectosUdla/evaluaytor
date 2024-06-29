@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.udla.evaluaytor.businessdomain.empresa.dto.ProveedorDTO;
 import com.udla.evaluaytor.businessdomain.empresa.models.Perito;
+import com.udla.evaluaytor.businessdomain.empresa.models.Categoria;
 import com.udla.evaluaytor.businessdomain.empresa.dto.ProveedorResponseDTO;
 import com.udla.evaluaytor.businessdomain.empresa.repositories.CategoriaRepository;
 import com.udla.evaluaytor.businessdomain.empresa.repositories.EmpresaRepository;
@@ -119,6 +120,13 @@ public class EmpresaController {
     public ResponseEntity<Perito> getPeritoById(@PathVariable Long id) {
         Optional<Perito> peritoOptional = peritoRepository.findById(id);
         return peritoOptional.map(perito -> new ResponseEntity<>(perito, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @GetMapping("categoria/findbyid/{id}")
+    public ResponseEntity<Categoria> getCategoriaById(@PathVariable Long id) {
+        Optional<Categoria> categoriaOptional = categoriaRepository.findById(id);
+        return categoriaOptional.map(categoria -> new ResponseEntity<>(categoria, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 }

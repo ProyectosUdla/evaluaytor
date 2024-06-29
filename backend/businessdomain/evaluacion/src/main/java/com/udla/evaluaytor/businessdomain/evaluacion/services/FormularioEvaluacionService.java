@@ -4,6 +4,6 @@ import com.udla.evaluaytor.businessdomain.evaluacion.models.FormularioEvaluacion
 
 public interface FormularioEvaluacionService {
 
-    public FormularioEvaluacion getFormularioEvaluacion(Long formularioId, Long proveedorId, Long peritoId);
+    public FormularioEvaluacion getFormularioEvaluacion(Long formularioId);
 
 }

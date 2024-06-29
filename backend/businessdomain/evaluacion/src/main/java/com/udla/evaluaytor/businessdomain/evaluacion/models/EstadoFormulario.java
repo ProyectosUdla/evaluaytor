@@ -1,10 +1,7 @@
 package com.udla.evaluaytor.businessdomain.evaluacion.models;
 
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

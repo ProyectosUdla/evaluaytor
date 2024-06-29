@@ -1,10 +1,7 @@
 package com.udla.evaluaytor.businessdomain.evaluacion.models;
 
 import java.time.LocalDate;
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -26,14 +23,21 @@ public class FormularioEvaluacion {
     private LocalDate fecha;
     private Integer evaluacion;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "estado_formulario_id", nullable = false)
+    @JsonBackReference
+    private EstadoFormulario estadoFormulario;
+
+    private Long proveedor_id;
+    private Long categoria_id;
+    private Long perito_id;
+
     @Transient
     private Proveedor proveedor;
 
     @Transient
     private Perito Perito;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "estado_id", nullable = false)
-    @JsonBackReference
-    private EstadoFormulario estadoFormulario;
+    @Transient
+    private Categoria categoria;
 }

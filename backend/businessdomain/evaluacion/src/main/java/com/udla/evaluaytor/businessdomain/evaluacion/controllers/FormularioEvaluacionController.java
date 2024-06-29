@@ -16,9 +16,9 @@ public class FormularioEvaluacionController {
     @Autowired
     private FormularioEvaluacionService formularioEvaluacionService;
 
-    @GetMapping("/formulario/{formularioId}/proveedor/{proveedorId}/perito/{peritoId}")
-    public FormularioEvaluacion getFormularioEvaluacion(@PathVariable Long formularioId, @PathVariable Long proveedorId, @PathVariable Long peritoId) {
-        return formularioEvaluacionService.getFormularioEvaluacion(formularioId, proveedorId, peritoId);
+    @GetMapping("/formulario/{formularioId}")
+    public FormularioEvaluacion getFormularioEvaluacion(@PathVariable Long formularioId) {
+        return formularioEvaluacionService.getFormularioEvaluacion(formularioId);
     }
 
 }

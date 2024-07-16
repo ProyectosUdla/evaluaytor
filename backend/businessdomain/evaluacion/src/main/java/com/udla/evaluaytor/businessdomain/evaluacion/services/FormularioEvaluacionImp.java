@@ -32,21 +32,21 @@ public class FormularioEvaluacionImp implements FormularioEvaluacionService {
         // Llama al microservicio de proveedor para obtener la información del proveedor
         WebClient webClient = webClientBuilder.build();
         Mono<Proveedor> proveedorMono = webClient.get()
-            .uri("http://localhost:8086/api/empresa/proveedor/findbyid/{id}", proveedorId)
+            .uri("http://EMPRESA/api/empresa/proveedor/findbyid/{id}", proveedorId)
             .retrieve()
             .bodyToMono(Proveedor.class);
         Proveedor proveedor = proveedorMono.block();
         formularioEvaluacion.setProveedor(proveedor);
 
         Mono<Categoria> categoriaMono = webClient.get()
-            .uri("http://localhost:8086/api/empresa/categoria/findbyid/{id}", categoriaId)
+            .uri("http://EMPRESA/api/empresa/categoria/findbyid/{id}", categoriaId)
             .retrieve()
             .bodyToMono(Categoria.class);
         Categoria categoria = categoriaMono.block();
         formularioEvaluacion.setCategoria(categoria);
 
         Mono<Perito> peritoMono = webClient.get()
-            .uri("http://localhost:8086/api/empresa/perito/findbyid/{id}", peritoId)
+            .uri("http://EMPRESA/api/empresa/perito/findbyid/{id}", peritoId)
             .retrieve()
             .bodyToMono(Perito.class);
         Perito perito = peritoMono.block();

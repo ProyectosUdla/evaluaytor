@@ -15,13 +15,5 @@
 	<name>empresa</name>
 	<description>Gestión de empresa</description>
 
-	<dependencies>
-	
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-	</dependencies>
 </project>

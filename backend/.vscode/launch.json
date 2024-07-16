@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "KeycloakAdapterApplication",
+            "request": "launch",
+            "mainClass": "com.udla.evaluaytor.infraestructuredomain.keycloakadapter.KeycloakAdapterApplication",
+            "projectName": "keycloak-adapter"
+        },
+        {
+            "type": "java",
+            "name": "ApigatewayApplication",
+            "request": "launch",
+            "mainClass": "com.udla.evaluaytor.infraestructuredomain.apigateway.ApigatewayApplication",
+            "projectName": "apigateway"
+        },
+        {
+            "type": "java",
+            "name": "EurekaserverApplication",
+            "request": "launch",
+            "mainClass": "com.udla.evaluaytor.infraestructuredomain.eurekaserver.EurekaserverApplication",
+            "projectName": "eurekaserver"
+        },
+        {
+            "type": "java",
             "name": "EvaluacionApplication",
             "request": "launch",
             "mainClass": "com.udla.evaluaytor.businessdomain.evaluacion.EvaluacionApplication",

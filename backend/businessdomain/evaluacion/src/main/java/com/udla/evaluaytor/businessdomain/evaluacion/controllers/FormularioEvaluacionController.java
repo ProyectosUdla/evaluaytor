@@ -10,7 +10,7 @@ import com.udla.evaluaytor.businessdomain.evaluacion.models.FormularioEvaluacion
 import com.udla.evaluaytor.businessdomain.evaluacion.services.FormularioEvaluacionService;
 
 @RestController
-@RequestMapping("/api/evaluiacion")
+@RequestMapping("/api/evaluacion")
 public class FormularioEvaluacionController {
 
     @Autowired

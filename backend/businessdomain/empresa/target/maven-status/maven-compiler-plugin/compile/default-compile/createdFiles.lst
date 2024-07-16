@@ -1,6 +1,8 @@
 com\udla\evaluaytor\businessdomain\empresa\dto\ProveedorDTO.class
 com\udla\evaluaytor\businessdomain\empresa\dto\CategoriaDTO.class
+com\udla\evaluaytor\businessdomain\empresa\models\Perito.class
 com\udla\evaluaytor\businessdomain\empresa\repositories\EmpresaRepository.class
+com\udla\evaluaytor\businessdomain\empresa\repositories\PeritoRepository.class
 com\udla\evaluaytor\businessdomain\empresa\EmpresaApplication.class
 com\udla\evaluaytor\businessdomain\empresa\models\Empresa.class
 com\udla\evaluaytor\businessdomain\empresa\services\ProveedorService.class

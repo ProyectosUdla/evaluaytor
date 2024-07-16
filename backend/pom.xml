@@ -11,6 +11,7 @@
 
 	<modules>
         <module>businessdomain</module>
+        <module>infraestructuredomain</module>
     </modules>
 
 	<groupId>com.udla</groupId>
@@ -61,6 +62,18 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 
     </dependencies>
